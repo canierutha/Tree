@@ -49,15 +49,10 @@ const covers = function(root, node) {
 
 var root = new TreeNode(3);
 root.left = new TreeNode(2);
-root.left.parent = root;
 root.right = new TreeNode(5);
-root.right.parent = root;
 root.left.left = new TreeNode(1);
-root.left.left.parent = root.left;
 root.right.left = new TreeNode(4);
-root.right.left.parent = root.right;
 root.right.right = new TreeNode(6);
-root.right.right.parent = root.right;
 
 console.log(`The common ancestor for the nodes ${root.right.left.val} and ${root.right.right.val} is : ${find_common_ancestor(root, root.right.left, root.right.right).val}`);
 console.log(`The common ancestor for the nodes ${root.left.val} and ${root.right.right.val} is : ${find_common_ancestor(root, root.left, root.right.right).val}`);
