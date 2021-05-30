@@ -6,7 +6,8 @@ class TreeNode {
    this.right = null;
    this.next = null;
  }
- 
+};
+
 function create_minimal_BST(array) {
  return create_BST_recursive(array, 0, array.length - 1);
 }
@@ -24,3 +25,5 @@ function create_BST_recursive(array, start, end) {
  }
  return treeNode;
 }
+
+console.log(create_minimal_BST([1,2,3,4,5]));
